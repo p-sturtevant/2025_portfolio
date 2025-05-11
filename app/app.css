@@ -1,15 +1,32 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-dragon: 'Dragon Steel-Regular', 'sans-serif';
+	--font-dragon-rough: 'Dragon Steel-Rough', 'sans-serif';
+	--font-dragon-sharp: 'Dragon Steel', 'sans-serif';
+	--font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@font-face {
+	font-family: 'Dragon Steel-Regular';
+	src: url('./assets/fonts/Dragonsteel-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Dragon Steel-Rough';
+	src: url('./assets/fonts/Dragonsteel-Rough.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Dragon Steel-Sharp';
+	src: url('./assets/fonts/Dragonsteel-Sharp.woff2') format('woff2');
 }
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+	@apply bg-white dark:bg-gray-950;
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+	@media (prefers-color-scheme: dark) {
+		color-scheme: dark;
+	}
 }
